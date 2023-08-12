@@ -21,7 +21,7 @@ server.use((req, res, next) => {
  server.use(express.json()) // convierte lo JSON en obj de js
  server.use('/rickandmorty',router)  //agrega este string a cada ruta
 
- conn.sync({force:true}) // sincronizacion con BD
+ conn.sync({force:false}) // sincronizacion con BD
    .then(server.listen(PORT, ()=>{
     console.log('Server raised in port: '+ PORT)
    })
